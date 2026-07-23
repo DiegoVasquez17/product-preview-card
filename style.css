@@ -14,11 +14,11 @@ body{
 }
 
 .card{
-    /* border: 3px solid red; */
     max-width: 375px;
     margin: 15px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .card__content{
@@ -31,7 +31,8 @@ body{
 
 .card__img img{
     max-width: 100%;
-    border-radius: 10px 10px 0 0;
+    height: 100%;
+    object-fit: cover;
 }
 
 .product__type{
@@ -94,6 +95,8 @@ body{
     font-family: Montserrat;
     font-weight: 500;
     font-size: .8em;
+    border: none;
+    width: 100%;
 }
 
 .product__add:hover{
@@ -107,11 +110,6 @@ body{
 .product__add img, .product__add span{
     user-select: none;
 }
-
-footer{
-    margin-bottom: 20px;
-}
-
 
 
 @media screen and (min-width: 800px){
@@ -127,7 +125,19 @@ footer{
     .card__img picture{
         height: 100%;
         object-fit: cover;
-        border-radius: 10px 0 0 10px;
     }
 
 }
+
+/* 
+----- CHANGES MADE (7/22/2026) -----
+
+- button border set to 'none'
+- changed .product__add from div to button
+- added button-wrapper
+- centered button with button-wrapper
+
+
+*/
+
+
